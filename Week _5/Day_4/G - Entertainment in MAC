@@ -1,0 +1,55 @@
+//MASHRUF's work
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define pb push_back
+#define ff first
+#define ss second
+#define mp make_pair
+
+void ok()
+{
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    string result = "";
+    int x=0;
+    for (int i = 0; i < s.size()/2; i++)
+    {
+        if (s[i]< s[s.size()-i-1])
+        {
+
+            x=0;
+            break;
+        }
+        if(s[i]>s[s.size()-i-1])
+        {
+            x=1;
+            break;
+        }
+
+    }
+    if(x==0)
+    {
+        cout<<s<<endl;
+    }
+    else
+    {
+        string a=s;
+        reverse(a.begin(),a.end());
+        cout<<a<<s<<endl;
+    }
+
+}
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        ok();
+    }
+    return 0;
+}
