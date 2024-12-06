@@ -1,0 +1,39 @@
+// MASHRUF's work
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define pb push_back
+#define ff first
+#define mp make_pair
+#define no cout << "NO" << '\n'
+#define yes cout << "YES" << '\n'
+#define endl '\n'
+#define fast() ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
+
+void ok()
+{
+    int n;
+    cin >> n;
+    cout << n/2 + n%2 << endl;
+    int l = 1, r = 3*n;
+    while (l < r)
+    {
+        cout << l << " " << r << endl;
+        l += 3;
+        r -= 3;
+    }
+}
+
+int main()
+{
+    fast();
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        ok();
+    }
+
+    return 0;
+}
