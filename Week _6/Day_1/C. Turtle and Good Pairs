@@ -1,0 +1,61 @@
+// MASHRUF's work
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define pb push_back
+#define ff first
+#define mp make_pair
+#define no cout << "NO" << '\n'
+#define yes cout << "YES" << '\n'
+#define endl '\n'
+#define fast() ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
+
+void ok()
+{
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+
+    vector<pair<int, char>> freq(26);
+    for (int i = 0; i < 26; i++)
+        freq[i].second = 'a' + i;
+
+    for (char c : s)
+        freq[c - 'a'].first++;
+
+    sort(freq.rbegin(), freq.rend());
+    string result(n, ' ');
+
+    int idx = 0;
+    for (auto [cnt, ch] : freq)
+    {
+        if (cnt == 0)
+            break;
+
+        for (int i = 0; i < cnt; i++)
+        {
+            if (idx >= n)
+                idx = 1;
+
+            result[idx] = ch;
+            idx += 2;
+        }
+    }
+
+    cout << result << '\n';
+}
+
+int main()
+{
+    fast();
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        ok();
+    }
+
+    return 0;
+}
