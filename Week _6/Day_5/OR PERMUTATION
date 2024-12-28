@@ -1,0 +1,25 @@
+void ok()
+{
+    int a;
+    cin >> a;
+    for (int i = a; i >= 1; i--)
+    {
+        cout << i << " ";
+    }
+    
+    cout << endl;
+    
+}
+
+int main()
+{
+    fast();
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        ok();
+    }
+
+    return 0;
+}
